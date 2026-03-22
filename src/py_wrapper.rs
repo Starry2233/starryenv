@@ -80,7 +80,7 @@ pub fn get_system_env(
 }
 
 #[pymodule]
-fn myenv(_py: Python, m: &PyModule) -> PyResult<()> {
+fn starryenv(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(set_process_env, m)?)?;
     m.add_function(wrap_pyfunction!(set_user_env, m)?)?;
     m.add_function(wrap_pyfunction!(set_system_env, m)?)?;
